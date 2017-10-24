@@ -21,9 +21,10 @@ type VolCreateRequest struct {
 	Name         string            `json:"name"`
 	Transport    string            `json:"transport,omitempty"`
 	ReplicaCount int               `json:"replica,omitempty"`
-	Bricks       []string          `json:"bricks"`
+	Bricks       []string          `json:"bricks,omitempty"`
 	Force        bool              `json:"force,omitempty"`
 	Options      map[string]string `json:"options,omitempty"`
+	Size         int               `json:"size,omitempty"`
 	// Bricks list is ordered (like in glusterd1) and decides which bricks
 	// form replica sets.
 }
